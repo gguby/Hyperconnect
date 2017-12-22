@@ -1,0 +1,83 @@
+PODS:
+  - Alamofire (4.5.1)
+  - ImageSlideshow (1.4.1):
+    - ImageSlideshow/Core (= 1.4.1)
+  - ImageSlideshow/Core (1.4.1)
+  - ImageSlideshow/Kingfisher (1.4.1):
+    - ImageSlideshow/Core
+    - Kingfisher (> 3.0)
+  - Kingfisher (4.3.1)
+  - ModelMapper (7.3.0)
+  - Moya (10.0.1):
+    - Moya/Core (= 10.0.1)
+  - Moya-ModelMapper/Core (6.0.0):
+    - ModelMapper
+    - Moya (~> 10.0)
+  - Moya-ModelMapper/RxSwift (6.0.0):
+    - Moya-ModelMapper/Core
+    - Moya/RxSwift (~> 10.0)
+    - RxSwift
+  - Moya/Core (10.0.1):
+    - Alamofire (~> 4.1)
+    - Result (~> 3.0)
+  - Moya/RxSwift (10.0.1):
+    - Moya/Core
+    - RxSwift (~> 4.0)
+  - ReactorKit (1.1.0):
+    - RxSwift (>= 4.0.0)
+  - Result (3.2.4)
+  - RxCocoa (4.0.0):
+    - RxSwift (~> 4.0)
+  - RxCodable (0.3.0):
+    - RxCodable/Core (= 0.3.0)
+  - RxCodable/Core (0.3.0):
+    - RxSwift (>= 4.0.0-beta.0)
+  - RxGesture (1.2.1):
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
+  - RxOptional (3.3.0):
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
+  - RxSwift (4.0.0)
+  - RxViewController (0.3.0):
+    - RxCocoa (>= 4.0.0)
+    - RxSwift (>= 4.0.0)
+  - Then (2.3.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - ImageSlideshow (~> 1.4)
+  - ImageSlideshow/Kingfisher
+  - Kingfisher
+  - Moya
+  - Moya-ModelMapper/RxSwift
+  - Moya/RxSwift
+  - ReactorKit
+  - RxCocoa
+  - RxCodable
+  - RxGesture
+  - RxOptional
+  - RxSwift
+  - RxViewController
+  - Then
+
+SPEC CHECKSUMS:
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  ImageSlideshow: 1bb0e610e28a71e8936d57265d882f61714a470b
+  Kingfisher: 75541c4b62f02e1fde6f9772303de3d9ebe8f5b3
+  ModelMapper: b70d373f224fc8cfc4da67b483db163a6cd05fe6
+  Moya: 9e621707ff754eeb51ff3ec51a3d54e517c0733a
+  Moya-ModelMapper: c59c0bbd042cf9d1d9b0acf38c5f930956bebed8
+  ReactorKit: 26470a9eff5094fae909a30af0be7cd0cf8a182d
+  Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
+  RxCocoa: d62846ca96495d862fa4c59ea7d87e5031d7340e
+  RxCodable: 12d41ab0ba58f455cfc83965fcc927ac4bad3e7f
+  RxGesture: c278eb05b187abd47e11e65464ae4de53ab71d95
+  RxOptional: e5448d3e21024489e07c31f6a262f2b50c975367
+  RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
+  RxViewController: 203510707e73dd95f147f0c387710e3ec80d2b0f
+  Then: ee21c97b85ff6062b9b0080c9abb1eea46743345
+
+PODFILE CHECKSUM: 3566dbe10c7154f2dd37fb1e6dfa14d97482a862
+
+COCOAPODS: 1.3.1

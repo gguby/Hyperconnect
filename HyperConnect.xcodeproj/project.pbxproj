@@ -1,0 +1,454 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		54B1575E3A4517A2183F1CEF /* Pods_HyperConnect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CD616B21BA45091A518B8B /* Pods_HyperConnect.framework */; };
+		A648EBFB1FEBA69C00B884C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A648EBFA1FEBA69C00B884C3 /* AppDelegate.swift */; };
+		A648EBFD1FEBA69C00B884C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A648EBFC1FEBA69C00B884C3 /* ViewController.swift */; };
+		A648EC001FEBA69C00B884C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A648EBFE1FEBA69C00B884C3 /* Main.storyboard */; };
+		A648EC021FEBA69C00B884C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A648EC011FEBA69C00B884C3 /* Assets.xcassets */; };
+		A648EC051FEBA69C00B884C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A648EC031FEBA69C00B884C3 /* LaunchScreen.storyboard */; };
+		A648EC0D1FEBAC6C00B884C3 /* Flickr.swift in Sources */ = {isa = PBXBuildFile; fileRef = A648EC0C1FEBAC6C00B884C3 /* Flickr.swift */; };
+		A648EC0F1FEBADC700B884C3 /* FlickrService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A648EC0E1FEBADC700B884C3 /* FlickrService.swift */; };
+		A6C96BD41FECA6FF007027A8 /* ViewControllerReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C96BD31FECA6FF007027A8 /* ViewControllerReactor.swift */; };
+		A6C96BD61FECE71D007027A8 /* ImageSlideShow+RX.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C96BD51FECE71D007027A8 /* ImageSlideShow+RX.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		05CD616B21BA45091A518B8B /* Pods_HyperConnect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HyperConnect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D6556E83AA6DD4943B2F451 /* Pods-HyperConnect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HyperConnect.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HyperConnect/Pods-HyperConnect.debug.xcconfig"; sourceTree = "<group>"; };
+		8482DED111EF4F7CEBE41B63 /* Pods-HyperConnect.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HyperConnect.release.xcconfig"; path = "Pods/Target Support Files/Pods-HyperConnect/Pods-HyperConnect.release.xcconfig"; sourceTree = "<group>"; };
+		A648EBF71FEBA69C00B884C3 /* HyperConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HyperConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A648EBFA1FEBA69C00B884C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A648EBFC1FEBA69C00B884C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A648EBFF1FEBA69C00B884C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A648EC011FEBA69C00B884C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A648EC041FEBA69C00B884C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A648EC061FEBA69C00B884C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A648EC0C1FEBAC6C00B884C3 /* Flickr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flickr.swift; sourceTree = "<group>"; };
+		A648EC0E1FEBADC700B884C3 /* FlickrService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrService.swift; sourceTree = "<group>"; };
+		A6C96BD31FECA6FF007027A8 /* ViewControllerReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerReactor.swift; sourceTree = "<group>"; };
+		A6C96BD51FECE71D007027A8 /* ImageSlideShow+RX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageSlideShow+RX.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A648EBF41FEBA69C00B884C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54B1575E3A4517A2183F1CEF /* Pods_HyperConnect.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4DCF9A6D8EC8F2949C8BCE42 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4D6556E83AA6DD4943B2F451 /* Pods-HyperConnect.debug.xcconfig */,
+				8482DED111EF4F7CEBE41B63 /* Pods-HyperConnect.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A648EBEE1FEBA69C00B884C3 = {
+			isa = PBXGroup;
+			children = (
+				A648EBF91FEBA69C00B884C3 /* HyperConnect */,
+				A648EBF81FEBA69C00B884C3 /* Products */,
+				4DCF9A6D8EC8F2949C8BCE42 /* Pods */,
+				D1D5078A102D4D304083C46B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A648EBF81FEBA69C00B884C3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A648EBF71FEBA69C00B884C3 /* HyperConnect.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A648EBF91FEBA69C00B884C3 /* HyperConnect */ = {
+			isa = PBXGroup;
+			children = (
+				A6C96BD51FECE71D007027A8 /* ImageSlideShow+RX.swift */,
+				A648EC0C1FEBAC6C00B884C3 /* Flickr.swift */,
+				A648EC0E1FEBADC700B884C3 /* FlickrService.swift */,
+				A648EBFA1FEBA69C00B884C3 /* AppDelegate.swift */,
+				A648EBFC1FEBA69C00B884C3 /* ViewController.swift */,
+				A6C96BD31FECA6FF007027A8 /* ViewControllerReactor.swift */,
+				A648EBFE1FEBA69C00B884C3 /* Main.storyboard */,
+				A648EC011FEBA69C00B884C3 /* Assets.xcassets */,
+				A648EC031FEBA69C00B884C3 /* LaunchScreen.storyboard */,
+				A648EC061FEBA69C00B884C3 /* Info.plist */,
+			);
+			path = HyperConnect;
+			sourceTree = "<group>";
+		};
+		D1D5078A102D4D304083C46B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				05CD616B21BA45091A518B8B /* Pods_HyperConnect.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A648EBF61FEBA69C00B884C3 /* HyperConnect */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A648EC091FEBA69C00B884C3 /* Build configuration list for PBXNativeTarget "HyperConnect" */;
+			buildPhases = (
+				47B3DEC3C49F5E8207C216FF /* [CP] Check Pods Manifest.lock */,
+				A648EBF31FEBA69C00B884C3 /* Sources */,
+				A648EBF41FEBA69C00B884C3 /* Frameworks */,
+				A648EBF51FEBA69C00B884C3 /* Resources */,
+				32BF3AB370DCE46300F4C7D5 /* [CP] Embed Pods Frameworks */,
+				131173B4139B2E67567C3D54 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HyperConnect;
+			productName = HyperConnect;
+			productReference = A648EBF71FEBA69C00B884C3 /* HyperConnect.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A648EBEF1FEBA69C00B884C3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = wsjung;
+				TargetAttributes = {
+					A648EBF61FEBA69C00B884C3 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = A648EBF21FEBA69C00B884C3 /* Build configuration list for PBXProject "HyperConnect" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A648EBEE1FEBA69C00B884C3;
+			productRefGroup = A648EBF81FEBA69C00B884C3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A648EBF61FEBA69C00B884C3 /* HyperConnect */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A648EBF51FEBA69C00B884C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A648EC051FEBA69C00B884C3 /* LaunchScreen.storyboard in Resources */,
+				A648EC021FEBA69C00B884C3 /* Assets.xcassets in Resources */,
+				A648EC001FEBA69C00B884C3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		131173B4139B2E67567C3D54 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HyperConnect/Pods-HyperConnect-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		32BF3AB370DCE46300F4C7D5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HyperConnect/Pods-HyperConnect-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ImageSlideshow/ImageSlideshow.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/ModelMapper/Mapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya-ModelMapper/Moya_ModelMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactorKit/ReactorKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCodable/RxCodable.framework",
+				"${BUILT_PRODUCTS_DIR}/RxGesture/RxGesture.framework",
+				"${BUILT_PRODUCTS_DIR}/RxOptional/RxOptional.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxViewController/RxViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/Then/Then.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImageSlideshow.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya_ModelMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactorKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCodable.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxGesture.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxOptional.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Then.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HyperConnect/Pods-HyperConnect-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		47B3DEC3C49F5E8207C216FF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HyperConnect-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A648EBF31FEBA69C00B884C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6C96BD61FECE71D007027A8 /* ImageSlideShow+RX.swift in Sources */,
+				A648EC0D1FEBAC6C00B884C3 /* Flickr.swift in Sources */,
+				A6C96BD41FECA6FF007027A8 /* ViewControllerReactor.swift in Sources */,
+				A648EBFD1FEBA69C00B884C3 /* ViewController.swift in Sources */,
+				A648EC0F1FEBADC700B884C3 /* FlickrService.swift in Sources */,
+				A648EBFB1FEBA69C00B884C3 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A648EBFE1FEBA69C00B884C3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A648EBFF1FEBA69C00B884C3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A648EC031FEBA69C00B884C3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A648EC041FEBA69C00B884C3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A648EC071FEBA69C00B884C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A648EC081FEBA69C00B884C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A648EC0A1FEBA69C00B884C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D6556E83AA6DD4943B2F451 /* Pods-HyperConnect.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WM5342TRW6;
+				INFOPLIST_FILE = HyperConnect/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = team.gguby.HyperConnect;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A648EC0B1FEBA69C00B884C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8482DED111EF4F7CEBE41B63 /* Pods-HyperConnect.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WM5342TRW6;
+				INFOPLIST_FILE = HyperConnect/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = team.gguby.HyperConnect;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A648EBF21FEBA69C00B884C3 /* Build configuration list for PBXProject "HyperConnect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A648EC071FEBA69C00B884C3 /* Debug */,
+				A648EC081FEBA69C00B884C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A648EC091FEBA69C00B884C3 /* Build configuration list for PBXNativeTarget "HyperConnect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A648EC0A1FEBA69C00B884C3 /* Debug */,
+				A648EC0B1FEBA69C00B884C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A648EBEF1FEBA69C00B884C3 /* Project object */;
+}
