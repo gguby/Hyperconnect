@@ -29,20 +29,22 @@ struct FlickrFeed: Mappable {
 struct FlickrItem: Mappable {
     let title : String
     let link : String
+    let media : [String:String]
     
     init(map: Mapper) throws {
         try title = map.from("title")
         try link = map.from("link")
+        try media = map.from("media")
     }
 }
 
 struct FlickrService {
-    let provider = MoyaProvider<Flickr>()
+    let provider = MoyaProvider<Flickr>(plugins: [NetworkLoggerPlugin(verbose: true)])
     
     func getPhotos() -> Observable<FlickrFeed> {
         return self.provider.rx
             .request(Flickr.getPhotos)
             .map(to: FlickrFeed.self)
             .asObservable()
-    }
+    } 
 }

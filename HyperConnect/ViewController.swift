@@ -27,13 +27,16 @@ class ViewController: UIViewController, StoryboardView {
         // Do any additional setup after loading the view, typically from a nib.
         
         slideView.backgroundColor = UIColor.white
-        
+
         slideView.pageControlPosition = PageControlPosition.underScrollView
         slideView.pageControl.currentPageIndicatorTintColor = UIColor.lightGray
         slideView.pageControl.pageIndicatorTintColor = UIColor.black
+        slideView.contentScaleMode = UIViewContentMode.scaleAspectFill
         
-        
-        
+        slideView.activityIndicator = DefaultActivityIndicator()
+        slideView.currentPageChanged = { page in
+            print("current page:", page)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,7 +45,38 @@ class ViewController: UIViewController, StoryboardView {
     }
 
     func bind(reactor: ViewControllerReactor) {
+        
+        let tapBackground = UITapGestureRecognizer()
+        tapBackground.rx.event
+            .subscribe(onNext: { [weak self] _ in
+                self?.view.endEditing(true)
+            })
+            .disposed(by: disposeBag)
+        view.addGestureRecognizer(tapBackground)
 
+        self.textfield.rx
+            .text.changed
+            .distinctUntilChanged()
+            .map{ Reactor.Action.updateInterval($0) }
+            .bind(to : reactor.action)
+            .disposed(by :disposeBag)
+        
+        self.btnSlide.rx.tap
+            .map{ Reactor.Action.startSlide }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+//        reactor.state.map { !$0.isShow }
+//            .bind(to: self.slideView.rx.isHidden)
+//            .disposed(by: disposeBag)
+        
+        reactor.state.map { $0.images }
+            .bind(to: self.slideView.rx.imageBinder)
+            .disposed(by: disposeBag)
+        
+        reactor.state.map { $0.interval ?? 0 }
+            .bind(to: self.slideView.rx.slideInterval)
+            .disposed(by: disposeBag)
     }
 }
 

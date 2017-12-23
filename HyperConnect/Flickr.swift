@@ -42,7 +42,7 @@ extension Flickr : TargetType {
     var task: Task {
         switch self {
         case .getPhotos:
-            return .requestParameters(parameters: ["format" : "json"], encoding: URLEncoding.default)
+            return .requestParameters(parameters: ["format" : "json", "nojsoncallback" : 1], encoding: URLEncoding.default)
         }
     }
     

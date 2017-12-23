@@ -78,10 +78,10 @@
 		A648EBF91FEBA69C00B884C3 /* HyperConnect */ = {
 			isa = PBXGroup;
 			children = (
+				A648EBFA1FEBA69C00B884C3 /* AppDelegate.swift */,
 				A6C96BD51FECE71D007027A8 /* ImageSlideShow+RX.swift */,
 				A648EC0C1FEBAC6C00B884C3 /* Flickr.swift */,
 				A648EC0E1FEBADC700B884C3 /* FlickrService.swift */,
-				A648EBFA1FEBA69C00B884C3 /* AppDelegate.swift */,
 				A648EBFC1FEBA69C00B884C3 /* ViewController.swift */,
 				A6C96BD31FECA6FF007027A8 /* ViewControllerReactor.swift */,
 				A648EBFE1FEBA69C00B884C3 /* Main.storyboard */,

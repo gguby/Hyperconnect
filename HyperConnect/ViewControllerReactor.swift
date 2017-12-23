@@ -14,14 +14,16 @@ import RxSwift
 
 final class ViewControllerReactor : Reactor {
     
+    let kingfisherSource = [KingfisherSource(urlString: "https://images.unsplash.com/photo-1432679963831-2dab49187847?w=1080")!, KingfisherSource(urlString: "https://images.unsplash.com/photo-1447746249824-4be4e1b76d66?w=1080")!, KingfisherSource(urlString: "https://images.unsplash.com/photo-1463595373836-6e0b0a8ee322?w=1080")!]
+    
     enum Action {
-        case updateInterval(Int)
+        case updateInterval(String?)
         case startSlide
         case stopSlide
     }
     
     enum Mutation {
-        case setInterval(Int)
+        case setInterval(Double)
         case showSlideView
         case hiddenSlideView
         case setImages([FlickrItem])
@@ -30,7 +32,7 @@ final class ViewControllerReactor : Reactor {
     }
     
     struct State {
-        var interval : Int?
+        var interval : Double?
         var images : [KingfisherSource] = []
         var isShow : Bool = false
         var isLoadingNextPage : Bool = false
@@ -47,14 +49,16 @@ final class ViewControllerReactor : Reactor {
     func mutate(action: Action) -> Observable<Mutation> {
         switch action {
         case let .updateInterval(interval):
-            return Observable.just(Mutation.setInterval(interval))
+            let str = interval ?? "0"
+            let intervarlDouble = Double(str) ?? 0
+            return Observable.just(Mutation.setInterval(intervarlDouble))
         case .startSlide:
             return Observable.concat([
                     Observable.just(Mutation.showSlideView),
                     
                     self.service.getPhotos()
                         .debug()
-                        .map{
+                        .map {
                             feed in
                             Mutation.setImages(feed.items)
                         },
@@ -83,7 +87,7 @@ final class ViewControllerReactor : Reactor {
             var newState = state
             var images : [KingfisherSource] = []
             for item in items {
-                let source = KingfisherSource(urlString: item.link)
+                let source = KingfisherSource(urlString: item.media["m"]!)
                 images.append(source!)
             }
             newState.images = images
