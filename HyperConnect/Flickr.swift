@@ -9,12 +9,6 @@
 import Foundation
 import Moya
 
-private extension String {
-    var urlEscaped: String {
-        return addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
-    }
-}
-
 enum Flickr {
     case getPhotos
 }

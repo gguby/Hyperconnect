@@ -10,11 +10,9 @@ import Foundation
 import Moya
 import Mapper
 import RxSwift
-import RxOptional
 import Moya_ModelMapper
 
 struct FlickrFeed: Mappable {
-    
     let title : String
     let link : String
     let items : [FlickrItem]

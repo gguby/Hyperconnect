@@ -22,6 +22,8 @@ class ViewController: UIViewController, StoryboardView {
     
     var disposeBag = DisposeBag()
     
+    let slidePage = PublishSubject<Int>()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -32,10 +34,13 @@ class ViewController: UIViewController, StoryboardView {
         slideView.pageControl.currentPageIndicatorTintColor = UIColor.lightGray
         slideView.pageControl.pageIndicatorTintColor = UIColor.black
         slideView.contentScaleMode = UIViewContentMode.scaleAspectFill
+        slideView.circular = false
         
         slideView.activityIndicator = DefaultActivityIndicator()
-        slideView.currentPageChanged = { page in
+        
+        slideView.currentPageChanged = { [weak self] page in
             print("current page:", page)
+            self?.slidePage.onNext(page)
         }
     }
 
@@ -53,22 +58,30 @@ class ViewController: UIViewController, StoryboardView {
             })
             .disposed(by: disposeBag)
         view.addGestureRecognizer(tapBackground)
+        
+        self.slidePage
+            .map{ Reactor.Action.nextPage($0)}
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
 
         self.textfield.rx
             .text.changed
-            .distinctUntilChanged()
             .map{ Reactor.Action.updateInterval($0) }
             .bind(to : reactor.action)
             .disposed(by :disposeBag)
         
         self.btnSlide.rx.tap
-            .map{ Reactor.Action.startSlide }
+            .map{ Reactor.Action.toggleSlide }
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
         
-//        reactor.state.map { !$0.isShow }
-//            .bind(to: self.slideView.rx.isHidden)
-//            .disposed(by: disposeBag)
+        reactor.state.map { $0.isShow == false }
+            .bind(to: self.slideView.rx.isHidden)
+            .disposed(by: disposeBag)
+        
+        reactor.state.map { $0.btnText }
+            .bind(to: self.btnSlide.rx.title())
+            .disposed(by: disposeBag)
         
         reactor.state.map { $0.images }
             .bind(to: self.slideView.rx.imageBinder)
