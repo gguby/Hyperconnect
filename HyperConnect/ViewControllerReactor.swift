@@ -27,6 +27,7 @@ final class ViewControllerReactor : Reactor {
         case appendImages([FlickrItem])
         case setLoadingNextPage(Bool)
         case nextPage(Int)
+        case onError(IntervalError)
     }
     
     struct State {
@@ -36,6 +37,7 @@ final class ViewControllerReactor : Reactor {
         var isLoadingNextPage : Bool = false
         var currenPage : Int = 0
         var btnText : String = "START"
+        var errorText : String? = ""
     }
     
     let initialState = State()
@@ -51,6 +53,10 @@ final class ViewControllerReactor : Reactor {
         case let .updateInterval(interval):
             let str = interval ?? "0"
             let intervarlDouble = Double(str) ?? 0
+            
+            if  intervarlDouble > 10 || intervarlDouble < 0{
+                return Observable.just(Mutation.onError(.outOfrange(message: "Out of range")))
+            }
             return Observable.just(Mutation.setInterval(intervarlDouble))
         case .toggleSlide:
             let isShow = !self.currentState.isShow
@@ -89,10 +95,14 @@ final class ViewControllerReactor : Reactor {
         switch mutation {
         case let .setInterval(interval):
             newState.interval = interval
+            newState.errorText = nil
             return newState
         case let .toggleSlide(isShow):
             newState.isShow = isShow
             newState.btnText = isShow ? "STOP" : "START"
+            if isShow == false {
+                newState.interval = 0
+            }
             return newState
         case let .setImages(items):
             var images : [KingfisherSource] = []
@@ -114,6 +124,23 @@ final class ViewControllerReactor : Reactor {
         case let .setLoadingNextPage(isLoadingNextPage):
             newState.isLoadingNextPage = isLoadingNextPage
             return newState
+        case .onError(let error):
+            newState.interval = 0
+            newState.errorText = error.message
+            return newState
+        }
+    }
+}
+
+enum IntervalError {
+    case invalid(message: String)
+    case outOfrange(message :String)
+    
+    var message : String {
+        switch self {
+            case .invalid(message: let message),
+                 .outOfrange(message: let message):
+            return message
         }
     }
 }

@@ -51,6 +51,7 @@ class ViewController: UIViewController, StoryboardView {
 
     func bind(reactor: ViewControllerReactor) {
         
+        // Input
         let tapBackground = UITapGestureRecognizer()
         tapBackground.rx.event
             .subscribe(onNext: { [weak self] _ in
@@ -75,6 +76,7 @@ class ViewController: UIViewController, StoryboardView {
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
         
+        // Output
         reactor.state.map { $0.isShow == false }
             .bind(to: self.slideView.rx.isHidden)
             .disposed(by: disposeBag)
@@ -89,6 +91,20 @@ class ViewController: UIViewController, StoryboardView {
         
         reactor.state.map { $0.interval ?? 0 }
             .bind(to: self.slideView.rx.slideInterval)
+            .disposed(by: disposeBag)
+        
+        // error
+        reactor.state.map {$0.errorText}
+            .filter { $0?.isEmpty == false }
+            .subscribe(onNext: { [weak self] text in
+                let actionSheet = UIAlertController(title: text, message: nil, preferredStyle: .actionSheet)
+                let ok = UIAlertAction(title: "Ok", style: .default) { _ in
+                    reactor.action.onNext(.updateInterval(nil))
+                    self?.textfield.text = "0"
+                }
+                actionSheet.addAction(ok)
+                self?.present(actionSheet, animated: true, completion: nil)
+            })
             .disposed(by: disposeBag)
     }
 }
